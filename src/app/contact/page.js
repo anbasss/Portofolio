@@ -1,6 +1,8 @@
 'use client'
 import Navbar from '../component/Navbar'
 import { useState } from 'react'
+import SocialMedia from "../components/SocialMedia";
+
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -17,6 +19,7 @@ export default function Contact() {
 
   return (
     <>
+      <SocialMedia />
       <Navbar />
       <main className="min-h-screen bg-[#0D1B2A] py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">

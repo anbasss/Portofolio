@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import Navbar from '../components/Navbar';
+import SocialMedia from "../components/SocialMedia";
+
 
 export const metadata = {
   title: 'Sertifikat - My Portfolio',
@@ -29,6 +31,7 @@ const Sertifikat = () => {
 
   return (
     <>
+      <SocialMedia />
       <Navbar />
       <section className="min-h-screen bg-[#0D1B2A] pt-20 pb-10">
         <div className="container mx-auto px-4">

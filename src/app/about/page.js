@@ -1,9 +1,12 @@
 'use client'
 import Navbar from '../component/Navbar'
+import SocialMedia from "../components/SocialMedia";
+
 
 export default function About() {
   return (
     <>
+      <SocialMedia />
       <Navbar />
       <main className="min-h-screen bg-[#0D1B2A] py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
