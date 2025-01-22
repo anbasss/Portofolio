@@ -133,8 +133,8 @@ function SertifikatPage() {
                       cert.rotate ? 'rotate-90' : ''
                     }`}
                     onError={(e) => {
-                      e.target.src = '/placeholder.jpg' // Add a placeholder image
-                      console.error(`Failed to load image: ${cert.image}`)
+                      console.error(`Failed to load image: ${cert.image}`);
+                      e.target.src = '/placeholder.jpg'; // Make sure to add a placeholder image
                     }}
                   />
                 </div>

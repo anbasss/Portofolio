@@ -55,7 +55,7 @@ const Home = () => {
 
         {/* Right column - Image */}
         <div className="md:w-1/2 order-1 md:order-2">
-          <div className="relative w-[400px] h-[400px] mx-auto">
+          <div className="relative w-[250px] h-[250px] md:w-[400px] md:h-[400px] mx-auto">
             <Image
               src="/luffy.jpg"
               alt="Profile"
