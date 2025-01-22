@@ -10,7 +10,7 @@ export default function About() {
       <Navbar />
       <main className="min-h-screen bg-[#0D1B2A] py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl font-bold text-center mb-12 text-white">
+          <h1 className="text-4xl font-bold text-center mb-12 mt-10 text-white">
             About Me
           </h1>
 
