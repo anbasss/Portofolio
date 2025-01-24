@@ -122,19 +122,19 @@ function SertifikatPage() {
                 key={cert.id}
                 className="bg-[#1B263B] rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700"
               >
-                <div className="aspect-[4/3] relative bg-gray-50 rounded-lg mb-4 overflow-hidden">
+                <div className="relative w-full h-[200px] bg-gray-50 rounded-lg mb-4">
                   <Image 
                     src={cert.image}
                     alt={cert.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    loading="lazy"
-                    className={`object-cover hover:scale-105 transition-transform duration-300 ${
+                    priority={true}
+                    className={`object-contain ${
                       cert.rotate ? 'rotate-90' : ''
                     }`}
                     onError={(e) => {
                       console.error(`Failed to load image: ${cert.image}`);
-                      e.target.src = '/placeholder.jpg'; // Make sure to add a placeholder image
+                      e.target.src = '/placeholder.jpg';
                     }}
                   />
                 </div>
@@ -187,7 +187,7 @@ function SertifikatPage() {
                     alt={`Certificate detail ${currentImageIndex + 1}`}
                     fill
                     className={`object-contain p-2 ${
-                      certificates.find(cert => cert.images.includes(selectedImages[currentImageIndex]))?.rotate ? 'rotate-90' : ''
+                      certificates.find(cert => cert.images.includes(selectedImages[currentImageIndex]))?.rotate ? 'rotate-90 scale-85' : ''
                     }`}
                     quality={100}
                     priority

@@ -41,7 +41,7 @@ export default function App() {
             }}
             className="fixed inset-0 bg-[#0D1B2A] flex items-center justify-center text-white text-6xl font-bold z-50"
           >
-            Halo{" "}
+            Hi{" "}
             <motion.span
               variants={waveAnimation}
               animate="animate"
