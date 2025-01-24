@@ -7,8 +7,8 @@ import { FaTiktok } from 'react-icons/fa';
 const SocialMedia = () => {
   const socialLinks = [
     { icon: <FiGithub size={20} />, href: "https://github.com/anbasss" },
-    { icon: <FiLinkedin size={20} />, href: "www.linkedin.com/in/anbas" },
-    { icon: <FiInstagram size={20} />, href: "https://www.instagram.com/annbaass/" },
+    { icon: <FiLinkedin size={20} />, href: "https://linkedin.com/in/anbas" },
+    { icon: <FiInstagram size={20} />, href: "https://www.instagram.com/annbaass" },
     { icon: <FaTiktok  size={20} />, href: "https://www.tiktok.com/@formforit" },
   ];
 
