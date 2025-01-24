@@ -1,5 +1,5 @@
 'use client'
-
+import { motion } from "framer-motion"
 import Image from 'next/image'
 import Navbar from '../components/Navbar'
 import SocialMedia from "../components/SocialMedia" 
@@ -112,14 +112,26 @@ function SertifikatPage() {
       <Navbar />
       <section className="min-h-screen bg-[#0D1B2A] pt-20 pb-10">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-8 text-white text-center">
+          <motion.h1 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-4xl font-bold mb-8 text-white text-center"
+          >
             Sertifikat
-          </h1>
+          </motion.h1>
           
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {certificates.map((cert) => (
-              <div 
+            {certificates.map((cert, index) => (
+              <motion.div 
                 key={cert.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ 
+                  duration: 0.5,
+                  delay: index * 0.1 
+                }}
                 className="bg-[#1B263B] rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700"
               >
                 <div className="relative w-full h-[200px] bg-gray-50 rounded-lg mb-4">
@@ -151,14 +163,24 @@ function SertifikatPage() {
                     Lihat Detail
                   </button>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
           {/* Images Modal */}
           {selectedImages && (
-            <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
-              <div className="relative w-[95vw] h-[95vh] max-w-5xl bg-white rounded-lg">
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
+            >
+              <motion.div 
+                initial={{ scale: 0.5 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0.5 }}
+                className="relative w-[95vw] h-[95vh] max-w-5xl bg-white rounded-lg"
+              >
                 <button 
                   onClick={closeImages}
                   className="absolute top-4 right-4 z-10 bg-white rounded-full w-10 h-10 flex items-center justify-center text-gray-600 hover:text-gray-800 text-2xl shadow-lg"
@@ -198,8 +220,8 @@ function SertifikatPage() {
                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white text-black px-4 py-2 rounded-full shadow-lg">
                   {currentImageIndex + 1} / {selectedImages.length}
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           )}
         </div>
       </section>

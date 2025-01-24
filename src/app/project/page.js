@@ -2,8 +2,8 @@
 import Navbar from '../components/Navbar'
 import SocialMedia from "../components/SocialMedia"
 import Image from 'next/image'
-import { FaGithub } from "react-icons/fa"
-import { FaExternalLinkAlt } from "react-icons/fa"
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"
+import { motion } from "framer-motion"
 
 function Project() {
   const projects = [
@@ -43,14 +43,26 @@ function Project() {
       <SocialMedia />
       <section className="min-h-screen bg-[#0D1B2A] pt-20 pb-10">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-8 text-white text-center">
+          <motion.h1 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-4xl font-bold mb-8 text-white text-center"
+          >
             My Projects
-          </h1>
+          </motion.h1>
           
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project) => (
-              <div 
+            {projects.map((project, index) => (
+              <motion.div 
                 key={project.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ 
+                  duration: 0.5,
+                  delay: index * 0.1 
+                }}
                 className="bg-[#1B263B] rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700"
               >
                 <div className="aspect-[16/9] relative bg-gray-800 rounded-lg mb-4 overflow-hidden">
@@ -97,7 +109,7 @@ function Project() {
                     Live Demo
                   </a>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
