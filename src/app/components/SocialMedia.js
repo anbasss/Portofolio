@@ -1,14 +1,15 @@
 'use client'
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FiGithub, FiLinkedin, FiInstagram, FiTwitter } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiInstagram } from 'react-icons/fi';
+import { FaTiktok } from 'react-icons/fa';
 
 const SocialMedia = () => {
   const socialLinks = [
-    { icon: <FiGithub size={20} />, href: "https://github.com/yourusername" },
-    { icon: <FiLinkedin size={20} />, href: "https://linkedin.com/in/yourusername" },
-    { icon: <FiInstagram size={20} />, href: "https://instagram.com/yourusername" },
-    { icon: <FiTwitter size={20} />, href: "https://twitter.com/yourusername" },
+    { icon: <FiGithub size={20} />, href: "https://github.com/anbasss" },
+    { icon: <FiLinkedin size={20} />, href: "www.linkedin.com/in/anbas" },
+    { icon: <FiInstagram size={20} />, href: "https://www.instagram.com/annbaass/" },
+    { icon: <FaTiktok  size={20} />, href: "https://www.tiktok.com/@formforit" },
   ];
 
   return (
