@@ -11,7 +11,25 @@ function Project() {
       id: 1,
       title: "Website Baca Komik",
       description: "Website untuk membaca komik secara online",
-      image: "/komikgue.png",
+      image: "/project/komikgue.png",
+      technologies: ["Next.js", "Tailwind CSS", "React"],
+      githubLink: "https://github.com/anbasss/KomikGue",
+      liveLink: "https://komik-gue.vercel.app/"
+    },
+    {
+      id: 2,
+      title: "Website Password Generator",
+      description: "Website  untuk membuat password secara random yang aman",
+      image: "/project/passwordgenerator.png",
+      technologies: ["Next.js", "Tailwind CSS", "React"],
+      githubLink: "https://github.com/anbasss/Password-Generator",
+      liveLink: "https://anbasss.github.io/Password-Generator/"
+    },
+    {
+      id: 3,
+      title: "Website Baca Komik",
+      description: "Website untuk membaca komik secara online",
+      image: "/project/komikgue.png",
       technologies: ["Next.js", "Tailwind CSS", "React"],
       githubLink: "https://github.com/anbasss/KomikGue.git",
       liveLink: "https://komik-gue.vercel.app/"
