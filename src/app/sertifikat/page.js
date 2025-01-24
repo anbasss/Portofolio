@@ -134,7 +134,7 @@ function SertifikatPage() {
                 }}
                 className="bg-[#1B263B] rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700"
               >
-                <div className="relative w-full h-[200px] bg-gray-50 rounded-lg mb-4">
+                <div className="relative w-full h-[200px] bg-gray-50 rounded-lg mb-4 group">
                   <Image 
                     src={cert.image}
                     alt={cert.title}
@@ -149,8 +149,11 @@ function SertifikatPage() {
                       e.target.src = '/placeholder.jpg';
                     }}
                   />
+                  {/* Hover overlay with title */}
+                  <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                    <h3 className="text-xl font-semibold text-white text-center">{cert.title}</h3>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-white">{cert.title}</h3>
                 <p className="text-blue-400 mb-2 font-medium">
                   {cert.issuer} • {cert.year}
                 </p>
