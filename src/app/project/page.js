@@ -2,17 +2,19 @@
 import Navbar from '../components/Navbar'
 import SocialMedia from "../components/SocialMedia"
 import Image from 'next/image'
+import { FaGithub } from "react-icons/fa"
+import { FaExternalLinkAlt } from "react-icons/fa"
 
 function Project() {
   const projects = [
     {
       id: 1,
-      title: "Portfolio Website",
-      description: "Personal portfolio website built with Next.js and Tailwind CSS",
-      image: "/project-1.jpg",
+      title: "Website Baca Komik",
+      description: "Website untuk membaca komik secara online",
+      image: "/komikgue.png",
       technologies: ["Next.js", "Tailwind CSS", "React"],
-      githubLink: "https://github.com/yourusername/portfolio",
-      liveLink: "https://yourportfolio.com"
+      githubLink: "https://github.com/anbasss/KomikGue.git",
+      liveLink: "https://komik-gue.vercel.app/"
     },
     // Add more projects here
   ]
@@ -62,16 +64,18 @@ function Project() {
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-blue-400 transition-colors"
+                    className="text-white hover:text-blue-400 transition-colors flex items-center gap-2"
                   >
+                    <FaGithub className="text-xl" />
                     GitHub
                   </a>
                   <a 
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-blue-400 transition-colors"
+                    className="text-white hover:text-blue-400 transition-colors flex items-center gap-2"
                   >
+                    <FaExternalLinkAlt className="text-lg" />
                     Live Demo
                   </a>
                 </div>
