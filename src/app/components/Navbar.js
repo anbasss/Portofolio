@@ -66,6 +66,12 @@ function Navbar() {
             >
               Sertifikat
             </Link>
+            <Link 
+              href="/galery" 
+              className="text-gray-300 hover:text-white hover:bg-[#1B263B] px-3 py-2 rounded-lg transition-colors"
+            >
+              Galery
+            </Link>
           </div>
         </div>
 

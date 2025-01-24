@@ -1,0 +1,14 @@
+.gallery {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
