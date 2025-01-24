@@ -1,6 +1,8 @@
 'use client'
 import Navbar from '../components/Navbar'
 import SocialMedia from "../components/SocialMedia"
+import { FaReact, FaNodeJs, FaDatabase } from 'react-icons/fa'
+import { SiNextdotjs, SiTailwindcss, SiTypescript, SiExpress, SiMongodb } from 'react-icons/si'
 
 function About() {
   return (
@@ -40,19 +42,19 @@ function About() {
                 <div>
                   <h3 className="font-medium mb-2 text-white">Frontend</h3>
                   <ul className="list-disc list-inside text-gray-300">
-                    <li>React.js</li>
-                    <li>Next.js</li>
-                    <li>Tailwind CSS</li>
-                    <li>JavaScript/TypeScript</li>
+                    <li className="flex items-center gap-2"><FaReact className="text-blue-400" /> React.js</li>
+                    <li className="flex items-center gap-2"><SiNextdotjs className="text-white" /> Next.js</li>
+                    <li className="flex items-center gap-2"><SiTailwindcss className="text-cyan-400" /> Tailwind CSS</li>
+                    <li className="flex items-center gap-2"><SiTypescript className="text-blue-600" /> JavaScript/TypeScript</li>
                   </ul>
                 </div>
                 <div>
                   <h3 className="font-medium mb-2 text-white">Backend</h3>
                   <ul className="list-disc list-inside text-gray-300">
-                    <li>Node.js</li>
-                    <li>Express.js</li>
-                    <li>MongoDB</li>
-                    <li>SQL</li>
+                    <li className="flex items-center gap-2"><FaNodeJs className="text-green-500" /> Node.js</li>
+                    <li className="flex items-center gap-2"><SiExpress className="text-white" /> Express.js</li>
+                    <li className="flex items-center gap-2"><SiMongodb className="text-green-500" /> MongoDB</li>
+                    <li className="flex items-center gap-2"><FaDatabase className="text-blue-400" /> SQL</li>
                   </ul>
                 </div>
               </div>
