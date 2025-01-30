@@ -8,12 +8,39 @@ import SocialMedia from "./components/SocialMedia";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const [greeting, setGreeting] = useState("Hi");
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const greetings = [
+    { text: "Hi", language: "English" },
+    { text: "你好", language: "Chinese" },
+    { text: "こんにちは", language: "Japanese" },
+    { text: "Hallo", language: "German" },
+    { text: "Привет", language: "Russian" },
+    { text: "안녕하세요", language: "Korean" }
+  ];
 
   useEffect(() => {
-    setTimeout(() => {
+    // Loading timer
+    const loadingTimer = setTimeout(() => {
       setIsLoading(false);
-    }, 2500); // Increased slightly for smoother transition
-  }, []);
+    }, 4000); // Increased from 2500 to 4000ms
+
+    // Greeting rotation timer
+    const greetingTimer = setInterval(() => {
+      setCurrentIndex((prevIndex) => {
+        const nextIndex = (prevIndex + 1) % greetings.length;
+        setGreeting(greetings[nextIndex].text);
+        return nextIndex;
+      });
+    }, 500); // Increased from 2000 to 3500ms
+
+    // Cleanup function
+    return () => {
+      clearTimeout(loadingTimer);
+      clearInterval(greetingTimer);
+    };
+  }, []); // Empty dependency array
 
   const waveAnimation = {
     animate: {
@@ -34,14 +61,25 @@ export default function App() {
             key="loading"
             initial={{ x: 0, opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ x: "-100%", opacity: 0.8 }}
-            transition={{ 
-              duration: 1,
-              ease: [0.645, 0.045, 0.355, 1],
+            exit={{ 
+              y: "-100%",
+              opacity: 0,
+              transition: {
+                duration: 0.8,
+                ease: [0.645, 0.045, 0.355, 1]
+              }
             }}
             className="fixed inset-0 bg-[#0D1B2A] flex items-center justify-center text-white text-6xl font-bold z-50"
           >
-            Hi{" "}
+            <motion.span
+              key={greeting} // Add key to force re-render
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+            >
+              {greeting}{" "}
+            </motion.span>
             <motion.span
               variants={waveAnimation}
               animate="animate"
@@ -53,11 +91,11 @@ export default function App() {
         ) : (
           <motion.div
             key="content"
-            initial={{ x: "100%", opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ 
-              duration: 1,
-              ease: [0.645, 0.045, 0.355, 1],
+              duration: 0.8,
+              ease: [0.645, 0.045, 0.355, 1]
             }}
           >
             <Navbar />
