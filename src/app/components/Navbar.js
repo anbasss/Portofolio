@@ -44,31 +44,31 @@ function Navbar() {
           <div className="hidden md:flex space-x-8">
             <Link 
               href="/" 
-              className="text-gray-300 hover:text-white hover:bg-[#1B263B] px-3 py-2 rounded-lg transition-colors"
+              className="text-gray-300 hover:text-white hover:bg-[#1B263B] px-3 py-2 rounded-lg transition-all duration-300 hover:scale-110"
             >
               Home
             </Link>
             <Link 
               href="/about" 
-              className="text-gray-300 hover:text-white hover:bg-[#1B263B] px-3 py-2 rounded-lg transition-colors"
+              className="text-gray-300 hover:text-white hover:bg-[#1B263B] px-3 py-2 rounded-lg transition-all duration-300 hover:scale-110"
             >
               About
             </Link>
             <Link 
               href="/project" 
-              className="text-gray-300 hover:text-white hover:bg-[#1B263B] px-3 py-2 rounded-lg transition-colors"
+              className="text-gray-300 hover:text-white hover:bg-[#1B263B] px-3 py-2 rounded-lg transition-all duration-300 hover:scale-110"
             >
               Project
             </Link>
             <Link 
               href="/sertifikat" 
-              className="text-gray-300 hover:text-white hover:bg-[#1B263B] px-3 py-2 rounded-lg transition-colors"
+              className="text-gray-300 hover:text-white hover:bg-[#1B263B] px-3 py-2 rounded-lg transition-all duration-300 hover:scale-110"
             >
               Sertifikat
             </Link>
             <Link 
               href="/galery" 
-              className="text-gray-300 hover:text-white hover:bg-[#1B263B] px-3 py-2 rounded-lg transition-colors"
+              className="text-gray-300 hover:text-white hover:bg-[#1B263B] px-3 py-2 rounded-lg transition-all duration-300 hover:scale-110"
             >
               Galery
             </Link>
@@ -86,28 +86,28 @@ function Navbar() {
           <div className="bg-[#1B263B] rounded-lg mt-2 py-2 shadow-lg">
             <Link
               href="/"
-              className="block text-gray-300 hover:text-white hover:bg-[#2B3B4B] px-4 py-2"
+              className="block text-gray-300 hover:text-white hover:bg-[#2B3B4B] px-4 py-2 transition-all duration-300 hover:scale-105"
               onClick={toggleMenu}
             >
               Home
             </Link>
             <Link
               href="/about"
-              className="block text-gray-300 hover:text-white hover:bg-[#2B3B4B] px-4 py-2"
+              className="block text-gray-300 hover:text-white hover:bg-[#2B3B4B] px-4 py-2 transition-all duration-300 hover:scale-105"
               onClick={toggleMenu}
             >
               About
             </Link>
             <Link
               href="/project"
-              className="block text-gray-300 hover:text-white hover:bg-[#2B3B4B] px-4 py-2"
+              className="block text-gray-300 hover:text-white hover:bg-[#2B3B4B] px-4 py-2 transition-all duration-300 hover:scale-105"
               onClick={toggleMenu}
             >
               Project
             </Link>
             <Link
               href="/sertifikat"
-              className="block text-gray-300 hover:text-white hover:bg-[#2B3B4B] px-4 py-2"
+              className="block text-gray-300 hover:text-white hover:bg-[#2B3B4B] px-4 py-2 transition-all duration-300 hover:scale-105"
               onClick={toggleMenu}
             >
               Sertifikat

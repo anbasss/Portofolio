@@ -12,7 +12,6 @@ export default function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const greetings = [
-    { text: "Hi", language: "English" },
     { text: "你好", language: "Chinese" },
     { text: "こんにちは", language: "Japanese" },
     { text: "Hallo", language: "German" },
@@ -24,7 +23,7 @@ export default function App() {
     // Loading timer
     const loadingTimer = setTimeout(() => {
       setIsLoading(false);
-    }, 4000); // Increased from 2500 to 4000ms
+    }, 3000); // Increased from 2500 to 4000ms
 
     // Greeting rotation timer
     const greetingTimer = setInterval(() => {
