@@ -54,7 +54,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0D1B2A] overflow-hidden">
+    <div className="min-h-screen overflow-hidden bg-gradient-to-b from-[#0D1B2A] via-[#1B263B] to-[#2C4159]">
       <AnimatePresence mode="wait">
         {isLoading ? (
           <motion.div
@@ -69,7 +69,7 @@ export default function App() {
                 ease: [0.645, 0.045, 0.355, 1]
               }
             }}
-            className="fixed inset-0 bg-[#0D1B2A] flex items-center justify-center text-white text-6xl font-bold z-50"
+            className="fixed inset-0 bg-gradient-to-b from-[#0D1B2A] via-[#1B263B] to-[#2C4159] flex items-center justify-center text-white text-6xl font-bold z-50"
           >
             <motion.span
               key={greeting} // Add key to force re-render
