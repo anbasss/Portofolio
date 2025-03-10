@@ -11,7 +11,7 @@ function Project() {
       id: 1,
       title: "Website Baca Komik",
       description: "Website untuk membaca komik secara online",
-      image: "/project/komikgue.png",
+      image: "/project/komikgue1.png",
       technologies: ["Next.js", "Tailwind CSS", "React"],
       githubLink: "https://github.com/anbasss/KomikGue",
       liveLink: "https://komik-gue.vercel.app/"
@@ -21,18 +21,27 @@ function Project() {
       title: "Website Password Generator",
       description: "Website  untuk membuat password secara random yang aman",
       image: "/project/passwordgenerator.png",
-      technologies: ["Next.js", "Tailwind CSS", "React"],
+      technologies: ["HTML", "CSS", "JS"],
       githubLink: "https://github.com/anbasss/Password-Generator",
       liveLink: "https://anbasss.github.io/Password-Generator/"
     },
     {
       id: 3,
-      title: "Website Baca Komik",
-      description: "Website untuk membaca komik secara online",
-      image: "/project/komikgue.png",
+      title: "Website Untuk Membaca Al-Quran",
+      description: "Website untuk membaca Al-Quran secara online",
+      image: "/project/alquran.png",
       technologies: ["Next.js", "Tailwind CSS", "React"],
-      githubLink: "https://github.com/anbasss/KomikGue.git",
-      liveLink: "https://komik-gue.vercel.app/"
+      githubLink: "",
+      liveLink: "https://al-quran-wheat.vercel.app/"
+    },
+    {
+      id: 4,
+      title: "Website Untuk Manajemen Kesehatan",
+      description: "Website yang saya kembangkan saat masa magang di Afila Media Karya",
+      image: "/project/sikeris.png",
+      technologies: ["PHP", "Laravel"],
+      githubLink: "",
+      liveLink: "https://al-quran-wheat.vercel.app/"
     },
     // Add more projects here
   ]
