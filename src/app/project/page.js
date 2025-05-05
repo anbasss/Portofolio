@@ -18,13 +18,14 @@ function Project() {
     },
     {
       id: 2,
-      title: "Website Password Generator",
-      description: "Website  untuk membuat password secara random yang aman",
-      image: "/project/passwordgenerator.png",
-      technologies: ["HTML", "CSS", "JS"],
-      githubLink: "https://github.com/anbasss/Password-Generator",
-      liveLink: "https://anbasss.github.io/Password-Generator/"
+      title: "Website Downloader",
+      description: "Website yang saya buat untuk memenuhi kebutuhan saya sendiri untuk mendwonload video dari media sosial",
+      image: "/project/downloader.png",
+      technologies: ["React", "Next"],
+      githubLink: "",
+      liveLink: "https://website-downloader-pearl.vercel.app/"
     },
+  
     {
       id: 3,
       title: "Website Untuk Membaca Al-Quran",
@@ -41,8 +42,37 @@ function Project() {
       image: "/project/sikeris.png",
       technologies: ["PHP", "Laravel"],
       githubLink: "",
-      liveLink: "https://al-quran-wheat.vercel.app/"
+      liveLink: "https://sikeris.afila.co.id/login"
     },
+    {
+      id: 5,
+      title: "Website Landing Page IMPHNEN",
+      description: "Website yang saya kembangkan untuk sebuah forum dari facebook yang bernama IMPHNEN",
+      image: "/project/imphnen.png",
+      technologies: ["React", "Next"],
+      githubLink: "",
+      liveLink: "https://imphen.vercel.app/"
+    },
+    {
+      id: 6,
+      title: "Website Card Youtube Generator",
+      description: "Website yang saya buat untuk have fun karena tujuaanya untuk membuat sebuah meme saja",
+      image: "/project/youtubecard.png",
+      technologies: ["React", "Next"],
+      githubLink: "",
+      liveLink: "https://youtube-card-creator.vercel.app/"
+    },
+    {
+      id: 7,
+      title: "Website Password Generator",
+      description: "Website  untuk membuat password secara random yang aman",
+      image: "/project/passwordgenerator.png",
+      technologies: ["HTML", "CSS", "JS"],
+      githubLink: "https://github.com/anbasss/Password-Generator",
+      liveLink: "https://anbasss.github.io/Password-Generator/"
+    },
+   
+    
     // Add more projects here
   ]
 
